@@ -1,22 +1,22 @@
-const SIZE_XSMALL = Symbol();
-const SIZE_SMALL  = Symbol();
-const SIZE_MEDIUM = Symbol();
-const SIZE_LARGE  = Symbol();
-const SIZE_XLARGE = Symbol();
+const person = {
+  name: "Adam",
+  weight: "180",
+  age: 30
+};
+for (const property in person) {
+  console.log("This person's " + property + " is " + person[property] + ".");
+}
 
-function getShirtsLeftInSize(size) {
-     if (size === SIZE_XSMALL) {
-         return 4;
-     } else if (size === SIZE_SMALL) {
-         return 6;
-     } else if (size === SIZE_MEDIUM) {
-         return 3;
-     } else if (size === SIZE_LARGE) {
-         return 7;
-     } else if (size === SIZE_XLARGE) {
-         return 12;
-     }
- }
+function intro(greeting, name) {
+  console.log(greeting + ", my name is " + name);
+}
 
- var mySize = SIZE_MEDIUM;
- console.log("There are " + getShirtsLeftInSize(mySize) + " shirts left in your size.");
+intro("hi", "Tom");
+
+function getArea(radius) {
+  return radius * radius * Math.PI;
+}
+
+let radius = 3;
+let area = getArea(radius);
+console.log("A circle with a radius of " + radius + " has an area of " + area + ".");
