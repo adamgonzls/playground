@@ -20,3 +20,22 @@ function getArea(radius) {
 let radius = 3;
 let area = getArea(radius);
 console.log("A circle with a radius of " + radius + " has an area of " + area + ".");
+
+//arrays 
+const drinks = ["water", "sparkling water", "juice", "soda"];
+console.log(drinks[1]);
+drinks[2] = "coffee";
+
+for (let i = 0; i < drinks.length; i++) {
+  console.log(drinks[i]);
+}
+
+let sortedDrinks = drinks.sort();
+
+drinks.push("tea");
+drinks.pop();
+
+console.log(sortedDrinks);
+
+drinks.splice(2, 3);
+console.log(drinks);
