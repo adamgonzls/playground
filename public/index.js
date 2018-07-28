@@ -17,6 +17,23 @@ function getArea(radius) {
   return radius * radius * Math.PI;
 }
 
-let radius = 3;
-let area = getArea(radius);
-console.log("A circle with a radius of " + radius + " has an area of " + area + ".");
+const dog = {
+  name: "Cooper",
+  age: 3,
+  bark: function() {
+    console.log("BORK BORK");
+  }
+}
+
+dog.age = 4;
+dog.weight = 20;
+console.log(dog);
+
+console.log(dog.hasOwnProperty("name"));
+console.log(dog.hasOwnProperty("weight"));
+
+console.log(Object.keys(dog));
+console.log(Object.values(dog));
+
+var entries = Object.entries(dog);
+console.log(entries);
