@@ -1,57 +1,66 @@
-const person = {
-  name: "Adam",
-  weight: "180",
-  age: 30
-};
-for (const property in person) {
-  console.log("This person's " + property + " is " + person[property] + ".");
-}
+// const dog = {
+//   name: "Cooper",
+//   age: 3,
+//   bark: function() {
+//     console.log("BORK BORK");
+//   }
+// }
 
-function intro(greeting, name) {
-  console.log(greeting + ", my name is " + name);
-}
+// dog.age = 4;
+// dog.weight = 20;
+// console.log(dog);
 
-intro("hi", "Tom");
+// console.log(dog.hasOwnProperty("name"));
+// console.log(dog.hasOwnProperty("weight"));
 
-function getArea(radius) {
-  return radius * radius * Math.PI;
-}
+// console.log(Object.keys(dog));
+// console.log(Object.values(dog));
 
-const drinks = ["water", "sparkling water", "juice", "soda"];
-console.log(drinks[1]);
-drinks[2] = "coffee";
+// var entries = Object.entries(dog);
+// console.log(entries);
 
-for (let i = 0; i < drinks.length; i++) {
-  console.log(drinks[i]);
-}
-
-let sortedDrinks = drinks.sort();
-
-drinks.push("tea");
-drinks.pop();
-
-console.log(sortedDrinks);
-
-drinks.splice(2, 3);
-console.log(drinks);
-
-const dog = {
-  name: "Cooper",
-  age: 3,
-  bark: function() {
-    console.log("BORK BORK");
+class Pet {
+  constructor(name, weight, adoptionFee) {
+    this.name = name;
+    this.weight = weight;
+    this.adoptionFee = adoptionFee;
+  }
+  getInfo() {
+    return "Hi, my name is " + this.name + ". I weigh " + this.weight + " pounds and my adoption fee is $" + this.adoptionFee + ".";
   }
 }
 
-dog.age = 4;
-dog.weight = 20;
-console.log(dog);
+// let pet1 = new Pet("Fluffy", 20, 45);
+// let pet2 = new Pet("Oreo", 15, 200);
+// let pet3 = new Pet("Claw", 12, 75);
 
-console.log(dog.hasOwnProperty("name"));
-console.log(dog.hasOwnProperty("weight"));
+// console.log(pet1.getInfo());
+// console.log(pet2.getInfo());
 
-console.log(Object.keys(dog));
-console.log(Object.values(dog));
+class Dog extends Pet {
+  bark() {
+    console.log("BARK BARK BARK");
+  }
+}
 
-var entries = Object.entries(dog);
-console.log(entries);
+// var dog = new Dog("Cooper", 20, 200);
+// console.log(dog.getInfo());
+// dog.bark();
+
+class Cat extends Pet {
+  constructor(name, weight, adoptionFee, brand) {
+    super(name, weight, adoptionFee);
+    this.brand = brand;
+  }
+  getFavoriteBrand() {
+    return this.brand;
+  }
+  getInfo() {
+    return "Hi, I'm a cat named " + this.name + " and I like " + this.brand +  ". I weigh " + this.weight + " pounds and my adoption fee is $" + this.adoptionFee + ".";
+  }
+}
+
+var honey = new Cat("Honey", 15, 300, "Purina");
+console.log(honey.getInfo());
+console.log(honey.getFavoriteBrand());
+// console.log(honey.this.fee);
