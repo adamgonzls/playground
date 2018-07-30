@@ -1,24 +1,3 @@
-// const dog = {
-//   name: "Cooper",
-//   age: 3,
-//   bark: function() {
-//     console.log("BORK BORK");
-//   }
-// }
-
-// dog.age = 4;
-// dog.weight = 20;
-// console.log(dog);
-
-// console.log(dog.hasOwnProperty("name"));
-// console.log(dog.hasOwnProperty("weight"));
-
-// console.log(Object.keys(dog));
-// console.log(Object.values(dog));
-
-// var entries = Object.entries(dog);
-// console.log(entries);
-
 class Pet {
   constructor(name, weight, adoptionFee) {
     this.name = name;
@@ -37,30 +16,31 @@ class Pet {
 // console.log(pet1.getInfo());
 // console.log(pet2.getInfo());
 
-class Dog extends Pet {
-  bark() {
-    console.log("BARK BARK BARK");
-  }
-}
+// class Dog extends Pet {
+//   bark() {
+//     console.log("BARK BARK BARK");
+//   }
+// }
 
 // var dog = new Dog("Cooper", 20, 200);
 // console.log(dog.getInfo());
 // dog.bark();
 
-class Cat extends Pet {
-  constructor(name, weight, adoptionFee, brand) {
-    super(name, weight, adoptionFee);
-    this.brand = brand;
-  }
-  getFavoriteBrand() {
-    return this.brand;
-  }
-  getInfo() {
-    return "Hi, I'm a cat named " + this.name + " and I like " + this.brand +  ". I weigh " + this.weight + " pounds and my adoption fee is $" + this.adoptionFee + ".";
-  }
-}
+// class Cat extends Pet {
+//   constructor(name, weight, adoptionFee, brand) {
+//     super(name, weight, adoptionFee);
+//     this.brand = brand;
+//   }
+//   getFavoriteBrand() {
+//     return this.brand;
+//   }
+//   getInfo() {
+//     return "Hi, I'm a cat named " + this.name + " and I like " + this.brand +  ". I weigh " + this.weight + " pounds and my adoption fee is $" + this.adoptionFee + ".";
+//   }
+// }
 
-var honey = new Cat("Honey", 15, 300, "Purina");
-console.log(honey.getInfo());
-console.log(honey.getFavoriteBrand());
-// console.log(honey.this.fee);
+// var honey = new Cat("Honey", 15, 300, "Purina");
+// console.log(honey.getInfo());
+// console.log(honey.getFavoriteBrand());
+// console.log(honey.adoptionFee);
+
