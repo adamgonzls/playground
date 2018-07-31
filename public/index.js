@@ -52,12 +52,20 @@ class Pet {
 
 // button.addEventListener("click", clickCallback);
 
-function createCookie(key, value, date) {
-  var expiration = new Date(date).toUTCString();
-  var cookie = escape(key) + "=" + escape(value) + ";expires=" + expiration + ";";
-  document.cookie = cookie;
-  console.log(cookie);
-  console.log("Creating new cookie with key: " + key + " value: " + value + " expiration: " + expiration);
+var game = {
+  "name": "Rocket League",
+  "release": 2015,
+  "developer": "Psyonix"
 }
-createCookie("sport", "basketball", Date.UTC(2018, 8, 1));
-createCookie("icecream", "vanilla", Date.UTC(2018, 8, 1));
+
+var gameJSON = JSON.stringify(game);
+localStorage.setItem("game", gameJSON);
+
+localStorage.setItem("restaurant", "chipotle");
+var restaurant = localStorage.getItem("restaurant");
+console.log(restaurant);
+
+
+var gameJSON = localStorage.getItem("game");
+var game = JSON.parse(gameJSON);
+console.log(game);
