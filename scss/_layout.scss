@@ -13,15 +13,23 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2em;
+  @include fontSize(32px);
+  margin-bottom: calculateMargin(20px);
 }
 
 p {
-  line-height: 150%;
+  @include fontSize(16px);
+  margin-top: 0;
+  margin-bottom: calculateMargin(10px);
+  line-height: 160%;
 }
 
 main {
   padding: 20px;
   background: rgba(255, 0, 255, .2);
   height: 100vh;
+}
+
+div {
+  margin-bottom: calculateMargin(10px);
 }
