@@ -44,3 +44,20 @@ class Pet {
 // console.log(honey.getFavoriteBrand());
 // console.log(honey.adoptionFee);
 
+// var button = document.querySelector("#button");
+
+// var clickCallback = function(event) {
+//   console.log("You've clicked the button");
+// }
+
+// button.addEventListener("click", clickCallback);
+
+function createCookie(key, value, date) {
+  var expiration = new Date(date).toUTCString();
+  var cookie = escape(key) + "=" + escape(value) + ";expires=" + expiration + ";";
+  document.cookie = cookie;
+  console.log(cookie);
+  console.log("Creating new cookie with key: " + key + " value: " + value + " expiration: " + expiration);
+}
+createCookie("sport", "basketball", Date.UTC(2018, 8, 1));
+createCookie("icecream", "vanilla", Date.UTC(2018, 8, 1));
