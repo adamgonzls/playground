@@ -52,20 +52,10 @@ class Pet {
 
 // button.addEventListener("click", clickCallback);
 
-var game = {
-  "name": "Rocket League",
-  "release": 2015,
-  "developer": "Psyonix"
-}
+// var text = "Fifteen minutes could save you fifteen percent or more on car insurance.";
+// var regex = /fifteen/gi;
+// console.log(text.match(regex));
 
-var gameJSON = JSON.stringify(game);
-localStorage.setItem("game", gameJSON);
-
-localStorage.setItem("restaurant", "chipotle");
-var restaurant = localStorage.getItem("restaurant");
-console.log(restaurant);
-
-
-var gameJSON = localStorage.getItem("game");
-var game = JSON.parse(gameJSON);
-console.log(game);
+var text = "I think that 15% is a lot.";
+var regex = /[123]/;
+console.log(text.match(regex));
