@@ -45,3 +45,19 @@ request.onload = function () {
 }
 
 request.send();
+
+console.log('here');
+
+var xhr = new XMLHttpRequest();
+var url = "https://cl.s10.exct.net/subscribe.aspx?lid=1267";
+var params = "MID=100001873&Initial Source=Air Direct Opt-in&First Name=Adam&Last Name=Gonzales&Email Address=adamgonzales1@gmail.com&Country=United States";
+xhr.open("POST", url, true);
+
+xhr.setRequestHeader("Content-type", 'application/x-www-form-urlencoded');
+
+xhr.onreadystatechange = function() {
+  if(xhr.readyState === 4 && xhr.status === 200) {
+    alert(http.responseText);
+  }
+}
+xhr.send(params);
